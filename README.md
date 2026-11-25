@@ -21,7 +21,7 @@ Always verify deadlines and eligibility on the official page before relying on t
 
 ## Project docs
 
-[Roadmap](docs/ROADMAP.md) · [Decisions](docs/DECISIONS.md) ·
+[Roadmap & feature status](docs/ROADMAP.md) · [Decisions](docs/DECISIONS.md) ·
 [Changelog](docs/CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
 Inspired by [career-ops](https://github.com/career-ops-hq/career-ops); not affiliated.

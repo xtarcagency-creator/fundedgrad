@@ -7,3 +7,4 @@ Newest first.
 - Eligibility filter + weighted scoring; tracker format.
 - `profile.example.md` template; `data/` gitignored.
 - Seed list of official scholarship catalogues.
+- `docs/ROADMAP.md` now tracks each feature's status (built / tested / partial), next, later and won't-do.
