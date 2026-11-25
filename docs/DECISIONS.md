@@ -29,3 +29,10 @@ the repo may contain a real person's profile, tracker or SOP.
 CLI on any capable model. Model routing (e.g. a cheaper model for
 `triage`) is a later, optional add-on, only if real use shows cost or
 speed problems.
+
+## D-007 No pre-built program database (2026-11)
+Deadlines, amounts and eligibility change every cycle, so a shipped list
+of programs would be wrong within a year and contradict hard rule 2.
+We ship only slow-changing country facts (who funds, when cycles open,
+post-study work rights) with sources and check dates; programs are always
+found and verified live.

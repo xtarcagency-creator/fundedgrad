@@ -12,7 +12,7 @@ It's just instructions plus markdown files: no server, no install.
 3. Say "search" to find programs on the web, or paste a program or scholarship link. It checks eligibility, scores it
    and adds it to `data/tracker.md`.
 4. Ask for "plan" to see this week's deadlines and actions, or
-   "sop for <program>" for a tailored draft.
+   "sop for <program>" for a tailored draft, and "review <program>" for feedback from a simulated selection panel.
 
 Your `data/` folder never leaves your machine and is gitignored. Don't paste
 it into issues: they are public.

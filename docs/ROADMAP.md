@@ -21,6 +21,7 @@ A feature isn't done until it's `tested`.
 | Deadline / prep-time plan for the week | `plan` | built | Prep-day estimates are rough defaults |
 | Stale-row flag (checked > 30 days ago) | `plan` | partial | Flags only; doesn't re-check |
 | Tailored SOP with claim-by-claim sources | `sop` | built | Needs `data/sop/base.md` written by the student |
+| Simulated selection panel (chair, faculty, scholarship panel) | `review` | built | A simulation; can't know real committee preferences |
 | Update status / documents | `update` | built | |
 | Tracker table (`data/tracker.md`) | all | built | |
 | No-fabrication and never-submit rules | all | built | |
@@ -39,6 +40,7 @@ A feature isn't done until it's `tested`.
 
 | Item | Trigger to build it |
 |---|---|
+| Country guide: stable facts per country (funders, cycle months, post-study work rights, tuition norms), each with source + checked date | Agreed idea; research not run yet |
 | `recheck` mode: re-verify stale rows automatically | Deadlines change and `plan` flags pile up |
 | Recommendation-letter tracker (who, which program, by when) | Free text in `Docs` gets messy |
 | CV tailoring per program | Testers ask for it |

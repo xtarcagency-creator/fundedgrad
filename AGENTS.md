@@ -84,6 +84,30 @@ student's real projects to them. Respect the word limit. Save to
 for the student to verify, then remove that list from the final copy only
 when they confirm.
 
+### review `<program or file>`
+Critique an SOP, CV or whole application as a selection panel would.
+Read the program page and the scholarship's stated criteria first, then
+review **separately** as each reviewer below. If your CLI can run
+subagents, give each reviewer its own subagent so they don't anchor on
+each other; otherwise write each review before reading the next.
+
+- **Admissions committee chair:** fit with this specific program, academic
+  readiness, whether the student would finish and succeed.
+- **Faculty member in the student's area:** depth and honesty of the
+  research/projects, whether the named courses/labs/faculty make sense,
+  technical claims that sound inflated.
+- **Scholarship panel member:** the funder's own criteria (leadership,
+  impact, return home, development goals, etc.) and whether each is
+  evidenced, not just claimed.
+
+Each reviewer gives: a 1-5 rating on their criteria, the three most
+important fixes (quoting the exact sentence), and anything they would
+reject the application for. Then merge into one prioritised fix list.
+Rules: reviewers judge only what's written and the program's published
+criteria; they don't invent policies or acceptance statistics. Suggested
+rewrites still follow hard rule 1. Say at the end that this is a
+simulation, and a real professor or past scholar is worth more.
+
 ### update `<program> <what changed>`
 Edit the row (status, documents, notes).
 
