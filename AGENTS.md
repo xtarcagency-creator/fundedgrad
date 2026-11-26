@@ -12,7 +12,11 @@ without admission, and admission is useless without funding).
 - `data/profile.md`: the student's facts and preferences. Personal, gitignored.
 - `data/tracker.md`: one row per program. List every funding route for it in
   the Funding column (note routes that are ineligible or can't be combined);
-  score the best route the student is eligible for. Personal, gitignored.
+  score the best route the student is eligible for. Portable funding that
+  isn't tied to one program (GKS, MEXT, Türkiye Bursları, the student's own
+  government scheme) gets its own **scheme row**: Program `(scheme) any
+  eligible program`, University `chosen later`. Keep cells short; put detail
+  in `data/notes.md`. Personal, gitignored.
 - `data/sop/`: base statement of purpose (`base.md`) and one tailored copy per program.
 - `data/notes.md`: session log: funding schemes ruled out (so they're never
   re-searched), decisions, and where to resume. Read it at the start of every
@@ -43,6 +47,14 @@ If `data/profile.md` is missing, run **setup** before anything else.
    one year as an estimate, labelled `est.`. Eligibility rules tied to a
    cycle (e.g. "graduate by 30 June") are checked against last cycle's rule
    and flagged. Re-check when the new call is due.
+   - A date with no year ("15 January" every year): `? (recurring: 15 Jan)`.
+   - If the estimate is already past, the intake is missed: status `closed`,
+     next action names the next intake.
+   - Two official dates that conflict, or a rule whose wording contradicts
+     itself: record both, prefer the dedicated deadlines page, quote the text,
+     and tell the student to ask the funder. Don't score 0 on an ambiguity.
+   - Two official amounts that conflict: prefer the funder's own figure and
+     record both.
 7. Arithmetic on sourced numbers is fine (e.g. yearly to monthly) if marked
    `≈`. Copy amounts with their period (`€7,419/yr`).
 8. **Nationality is checked against the funder's own list**, every time:
@@ -52,12 +64,19 @@ If `data/profile.md` is missing, run **setup** before anything else.
    earlier deadline). Never assume a rule for one nationality applies to another.
 9. **Never convert grades yourself.** Use the program's own conversion or
    country-specific minimum if it publishes one; otherwise record the
-   student's grade and scale as-is and flag it.
+   student's grade and scale as-is and flag it. Flag a published floor whose
+   scale may differ from the student's (e.g. "3.23/5.0" vs a 5.0 scale with a
+   3.0 pass mark). If a funder demands a converted grade, tell the student to
+   get an official conversion or class-rank letter from their own university.
 10. **Warn about scams.** Flag any "scholarship" that charges a fee to apply
     or to "secure" an award, guarantees acceptance, or is offered only
     through a paid agent. Real funding is applied for on the funder's or
-    university's own site. Never recommend paid consultants.
-11. **Talk in the student's preferred language** (from the profile). Write
+    university's own site. Never recommend paid consultants. An official
+    payment on the funder's own site (e.g. a deposit to accept an award) is
+    a cost to record, not a scam; flag it so the student can budget for it.
+11. **Talk in the student's preferred language** (from the profile). If they
+    want two (e.g. English plus explanations in Bangla), use the first for
+    everything and add a short summary and next actions in the second. Write
     application documents in the language the program requires.
 
 ## Modes
@@ -77,12 +96,20 @@ Interview the student (a few questions at a time) and write
    required documents, required tests, application fee (and any fee waiver
    for the student's country), visa proof-of-funds requirement (e.g. a
    blocked account or bank balance; this decides whether "free tuition"
-   is actually affordable), and post-study work rights.
+   is actually affordable), post-study work rights, any return-home
+   obligation, the actual degree start (a language year can delay it), whether
+   the degree is an officially recognised master's (some are private
+   certificates), credential checks or grade-equivalence procedures and their
+   cost (e.g. ECCTIS, APS), and the exact list of accepted English tests (a
+   test not on a closed list is not accepted).
 3. **Eligibility filter.** Check every hard rule against the profile
    (nationality, GPA, graduation date, test scores, work experience, age,
    years of prior education, e.g. some countries don't accept 3-year degrees).
    If any fails, say which one, set score `0`, still add the row so it's
-   not re-evaluated.
+   not re-evaluated. Also flag (without failing): total application cost
+   (fees + tests + checks + courier) above the profile's budget, a stipend
+   below the visa's required means of support, and a return-home obligation
+   that conflicts with the student's after-degree plan.
 4. **Score** with the weights in the profile (defaults below), each
    dimension 1-5, and show the arithmetic.
 5. Append or update the row in `data/tracker.md`. Show a 5-line summary:
@@ -93,6 +120,9 @@ Find new candidates with your web search and fetch tools. If you have
 none, say so and ask the student to paste links instead. Skip everything
 ruled out in `data/notes.md`; when a whole funding scheme fails (e.g. the
 student's nationality isn't eligible), add it there with the reason.
+0. Scheme-first: check the government and foundation schemes in **Sources**
+   (and the student's own government's page) for their nationality and log
+   open, closed and ineligible ones before searching programs.
 1. Build queries from the profile (field, countries, nationality, intake)
    plus the optional focus, e.g. `fully funded MSc artificial intelligence
    <country> <intake> scholarship international students`,
@@ -108,6 +138,9 @@ shell tool, or set the page's filters (e.g. citizenship, applicant category)
 if deadlines appear only after choosing them. If it still fails, say so and ask the student to paste its text. A search-result snippet
 from the official domain may be used if you cite the exact URL and mark it
 `(snippet)`. Don't fill the gaps from memory.
+A search engine's own summary of results is never a source: it can mix
+years and pages. If the official document is reachable, read it; the
+document beats any snippet or summary.
 
 After triage, tell the student which rows to run **evaluate** on next:
 triage doesn't score, so unscored rows can't be ranked.
@@ -116,12 +149,15 @@ triage doesn't score, so unscored rows can't be ranked.
 Same as evaluate but steps 1-3 only, and a one-line verdict each. Add rows.
 
 ### plan
-Sort tracker rows that aren't `ineligible`/`rejected`/`declined` (unscored
-`?` rows included) by `deadline - prep days needed`
+Sort tracker rows that aren't `ineligible`/`closed`/`rejected`/`declined`
+(unscored `?` rows included) by `deadline - prep days needed`
 (SOP ~5 days, recommendation letters ~21 days, test booking ~30 days,
 degree/transcript attestation ~14 days, consular or legalised income
-documents ~30 days, visa ~60 days before the start date; the profile can
-override). Output this week's actions and anything
+documents ~30 days, credential checks or grade equivalence ~30 days unless
+the official processing time says otherwise, contacting a supervisor first
+~30 days where required, visa ~60 days before the start date; at-home online
+tests like Duolingo ~7 days; the profile can override). Steps run in
+parallel, so use the longest one for each row. Output this week's actions and anything
 at risk of being missed. Flag rows whose `checked` date is older than 30 days
 for re-verification.
 
@@ -187,7 +223,14 @@ by name:
 - Japan: MEXT; Korea: Global Korea Scholarship (GKS); China: Chinese Government Scholarship
 - Türkiye: Türkiye Bursları; Hungary: Stipendium Hungaricum
 - Australia: Australia Awards; New Zealand: Manaaki New Zealand Scholarships
+- UK: Commonwealth Shared Scholarships (applied for through a named UK university)
 - Africa-focused: Mastercard Foundation Scholars Program
+- Spain / Ibero-America: Fundación Carolina
+- Indonesia: LPDP; Colombia: Colfuturo and ICETEX (mostly loans: Type `loan`)
+
+If an official document is only readable where another government re-hosts
+it (e.g. a scholarship guideline PDF on a foreign ministry's site), it may be
+used: cite that URL and say whose document it is.
 
 ## Scoring (defaults; the profile can override)
 
@@ -205,8 +248,16 @@ Score each dimension 1-5; the total is 0-5 with one decimal (0 if ineligible).
 - **Funding:** compare the stipend with the study country's official living-cost
   figure (e.g. the visa's required means of support), citing it. Funding that
   is competitive or income-based, not guaranteed, scores at most 4.
+- **Funding:** if no official living-cost figure exists, compare with a
+  government scholarship stipend for that country and say so. Five or fewer
+  awards per cycle scores at most 3. Loans score at most 1, whatever is
+  forgiven; write the forgiveness conditions in notes.
+- **Job market:** a return-home obligation lowers it if the student wants to
+  work abroad.
 - **Deadline safety:** days left to the earliest deadline: >90 = 5, 60-90 = 4,
   30-60 = 3, 14-30 = 2, <14 = 1. Unpublished (`est.`) dates score at most 3.
+  Passed: status `closed`.
+- Round the weighted total half up to one decimal.
 - If funding depends on something not in the profile (family income, gender),
   say so and ask; don't assume.
 
@@ -222,8 +273,9 @@ Say plainly when a dimension is a judgement call rather than a fact.
 ```
 
 `Type`: `bundled` (admission includes funding), `separate` (apply to funding
-separately), `waiver` (tuition only), `none`.
-`Status`: `found`, `ineligible`, `preparing`, `submitted`, `interview`,
+separately), `waiver` (tuition only), `partial` (some money but not tuition +
+living), `loan` (must be repaid, even if partly forgivable), `none`.
+`Status`: `found`, `ineligible`, `closed` (missed this intake), `preparing`, `submitted`, `interview`,
 `admitted`, `funded`, `rejected`, `declined`.
 `Stipend`: amount with its period, e.g. `€7,419/yr` or `€1,400/mo`.
 `Docs`: short codes, e.g. `SOP✓ CV✓ LoR 1/2 IELTS✗ transcript✓ HAT✗`; add

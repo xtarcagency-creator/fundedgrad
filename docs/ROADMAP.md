@@ -25,7 +25,8 @@ A feature isn't done until it's `tested`.
 | Update status / documents | `update` | built | |
 | Session log of rule-outs and resume point (`data/notes.md`) | all | built | Added after first real run |
 | Tracker table (`data/tracker.md`) | all | built | |
-| No-fabrication and never-submit rules | all | built | |
+| No-fabrication and never-submit rules | all | tested | Caught a third-party deadline and a mis-summarised one |
+| Multi-country rules (nationality lists, home routes, loans, scams, language) | all | tested | Simulated students from 5 countries; real users still needed |
 | Personal data kept out of git (`data/` ignored) | — | built | `git add -f` can still bypass it |
 
 ## Next (before inviting friends)
@@ -35,7 +36,7 @@ A feature isn't done until it's `tested`.
 | Run `sop` and `review` on a real or made-up SOP | The only untested modes |
 | Re-run `evaluate` after the 0.1.1 fixes | Confirm the new rules are followed |
 | Verify every link in **Sources** and each scheme's eligible-country list | Dead links waste searches; lists change yearly |
-| Test with students from 2-3 other countries (e.g. Nigeria, India, Bangladesh) | Rules so far were only tested for one nationality |
+| Test with real students from other countries | Simulated runs for 5 countries done (test 3); real users next |
 | Try it in Gemini CLI as well as Claude Code | Friends without a paid plan will use Gemini |
 | Write a short "first 10 minutes" example in the README | Lower the setup barrier for testers |
 

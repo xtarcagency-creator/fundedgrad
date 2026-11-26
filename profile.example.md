@@ -3,13 +3,15 @@
 - Preferred language for our conversation:
 
 ## Facts
+- Date of birth (many schemes have age limits):
 - Nationality / citizenships:
 - Current country of residence:
 - Degree, university, field:
 - Degree length (years) and total years of education (e.g. 16):
 - Expected graduation (YYYY-MM):
 - CGPA (and scale) / class rank:
-- English test (type, score, date) or planned date:
+- English test (type, overall + sub-scores, date) or planned date:
+- Other tests (GRE/GMAT, national tests such as HEC HAT), scores or plans:
 - Other languages:
 - Work / internship experience (months, where, what):
 - Research / publications:
@@ -24,7 +26,7 @@
 
 ## Goals
 - Field of interest within AI:
-- Target intake (e.g. Fall 2027):
+- Target start window (e.g. Sep 2027 - Feb 2028):
 - After the degree: job abroad / return home / PhD:
 
 ## Constraints

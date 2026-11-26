@@ -19,6 +19,15 @@ First real run (Gemini CLI, then Claude Code) found:
   - PDFs and filter-gated pages: extract text / set filters before giving up
   - `plan` prep times now include attestation, legalised documents and visa
   - profile template: credit breakdown, optional income band and gender for funding rules
+- Test 3: five made-up students (Nigeria, India, Bangladesh, Indonesia, Colombia) plus three real searches.
+  Fixed: scheme rows for portable funding (GKS, MEXT, LPDP); `closed` status and `partial` / `loan` types;
+  dates with no year, conflicting dates/amounts, self-contradicting rules; grade-floor scale mismatches and
+  funder-required conversions; official acceptance payments vs scams; bilingual preference; evaluate now
+  extracts return-home obligations, real degree start, recognised-degree status, credential-check costs and
+  closed test lists, and flags over-budget totals and stipends below visa means; scheme-first search; parallel
+  prep times incl. credential checks and supervisor contact; funding caps for scarce awards and loans; rounding;
+  re-hosted official documents; search-engine summaries are never a source (a real run misreported a PoliMi
+  deadline that way). Profile: date of birth, test sub-scores, GRE/national tests, start window.
 - Global use (D-008): nationality checked against each funder's list, home-country nomination
   routes, fee waivers, visa proof-of-funds and post-study work rights extracted, no grade
   conversion, scam warnings, conversation in the student's language, worldwide government
