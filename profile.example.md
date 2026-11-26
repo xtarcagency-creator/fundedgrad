@@ -37,5 +37,8 @@
 - Can afford a paid English test? Visa proof of funds (e.g. blocked account)?
 - Willing to learn a local language:
 
+## Writing style (optional)
+- e.g. British or American spelling, words to avoid, tone:
+
 ## Scoring overrides (optional)
 <!-- e.g. Funding 40%, Job market 25% ... must sum to 100 -->

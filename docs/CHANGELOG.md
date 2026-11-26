@@ -19,6 +19,7 @@ First real run (Gemini CLI, then Claude Code) found:
   - PDFs and filter-gated pages: extract text / set filters before giving up
   - `plan` prep times now include attestation, legalised documents and visa
   - profile template: credit breakdown, optional income band and gender for funding rules
+- `sop` writes plainly: no em dashes or stock phrases; optional writing-style rules in the profile.
 - `sop` now builds a base SOP by interview when the student has none (found when the first real user had no draft).
 - Test 3: five made-up students (Nigeria, India, Bangladesh, Indonesia, Colombia) plus three real searches.
   Fixed: scheme rows for portable funding (GKS, MEXT, LPDP); `closed` status and `partial` / `loan` types;

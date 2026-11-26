@@ -40,7 +40,7 @@ If `data/profile.md` is missing, run **setup** before anything else.
    aggregators. If only an aggregator has it, mark the row `unverified`.
 4. Never submit, email, pay or create accounts. You prepare; the student acts.
 5. Dates: write them as `YYYY-MM-DD` with the timezone if the page gives one.
-   Many deadlines differ for funding vs admission — record both.
+   Many deadlines differ for funding vs admission; record both.
 6. **Calls not published yet.** If the target year's call isn't out, write
    `? (last: <date of last cycle>)`. Never present last cycle's date, or a
    third-party guess, as this year's. `plan` may use last cycle's date plus
@@ -171,7 +171,10 @@ their answers and the profile, with the claim list below.
 Draft a tailored SOP from `data/sop/base.md` plus the program page: name
 specific courses, labs or faculty from the page (cite them), map the
 student's real projects to them. Respect the word limit. Save to
-`data/sop/<program-slug>.md`. List every claim and its source at the end
+`data/sop/<program-slug>.md`. Write plainly in the student's own voice: no
+em dashes, no stock phrases ("passionate about", "ever since I was a child",
+"delve", "in today's fast-paced world"), no claims of uniqueness. Follow any
+style rules saved in the profile. List every claim and its source at the end
 for the student to verify, then remove that list from the final copy only
 when they confirm.
 
