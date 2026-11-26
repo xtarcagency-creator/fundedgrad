@@ -46,6 +46,7 @@ A feature isn't done until it's `tested`.
 |---|---|
 | Translated README (e.g. Urdu, Hindi, Arabic, French, Spanish, Bengali) | Testers from those regions ask for it |
 | Country guide: stable facts per country (funders, cycle months, post-study work rights, tuition norms), each with source + checked date | Agreed idea; research not run yet |
+| `portfolio` mode: suggest projects that close gaps reviewers flag, sized to the time before deadlines | A real user asked for it (2026-11) |
 | `recheck` mode: re-verify stale rows automatically | Deadlines change and `plan` flags pile up |
 | Recommendation-letter tracker (who, which program, by when) | Free text in `Docs` gets messy |
 | CV tailoring per program | Testers ask for it |
