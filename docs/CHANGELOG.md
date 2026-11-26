@@ -9,6 +9,7 @@ First real run (Gemini CLI, then Claude Code) found:
 - Ruled-out funding schemes had nowhere to go; new `data/notes.md` session log.
 - Official sites sometimes return errors; official-domain snippets allowed if marked.
 - Triage now ends by naming which rows to evaluate next.
+- README redesigned: badges, mode table, made-up example session and tracker, scoring, file layout, privacy notes.
 
 ## 0.1.0 (unreleased)
 - `AGENTS.md` with setup, search, evaluate, triage, plan, sop and update modes.
