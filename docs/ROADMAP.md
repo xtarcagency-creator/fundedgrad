@@ -12,13 +12,13 @@ A feature isn't done until it's `tested`.
 | Feature | Mode | Status | Known gaps |
 |---|---|---|---|
 | Profile interview → `data/profile.md` | `setup` | tested | Worked in Gemini CLI (1 user) |
-| Extract program + funding facts from a page | `evaluate` | built | Not run on real pages |
+| Extract program + funding facts from a page | `evaluate` | tested | 4 real programs (Claude Code); gaps fixed in 0.1.1 |
 | Hard eligibility filter (nationality, GPA, dates, tests) | `evaluate` | built | |
-| Weighted 6-dimension score with shown arithmetic | `evaluate` | built | Weights are a guess; need real feedback |
+| Weighted 6-dimension score with shown arithmetic | `evaluate` | tested | Several dimensions are judgement calls; weights need more users |
 | Quick verdicts for many links | `triage` | tested | 15 rows in Gemini CLI; sources were homepages (fixed in 0.1.1) |
 | Web search for new programs | `search` | tested | Worked in Gemini CLI; official sites can return errors |
 | Seed list of official catalogues | `search` | partial | Links not verified |
-| Deadline / prep-time plan for the week | `plan` | built | Prep-day estimates are rough defaults |
+| Deadline / prep-time plan for the week | `plan` | tested | 1 user; prep-day estimates are rough defaults |
 | Stale-row flag (checked > 30 days ago) | `plan` | partial | Flags only; doesn't re-check |
 | Tailored SOP with claim-by-claim sources | `sop` | built | Needs `data/sop/base.md` written by the student |
 | Simulated selection panel (chair, faculty, scholarship panel) | `review` | built | A simulation; can't know real committee preferences |
@@ -32,7 +32,8 @@ A feature isn't done until it's `tested`.
 
 | Item | Why |
 |---|---|
-| Run `evaluate`, `plan`, `sop`, `review` on real programs | Only setup/search/triage tested so far |
+| Run `sop` and `review` on a real or made-up SOP | The only untested modes |
+| Re-run `evaluate` after the 0.1.1 fixes | Confirm the new rules are followed |
 | Verify every link in **Sources** | Dead links waste the agent's searches |
 | Try it in Gemini CLI as well as Claude Code | Friends without a paid plan will use Gemini |
 | Write a short "first 10 minutes" example in the README | Lower the setup barrier for testers |

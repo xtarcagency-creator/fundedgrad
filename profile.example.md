@@ -14,6 +14,10 @@
 - Awards:
 - Recommenders (name, role, relationship, asked yet?):
 - Transcript attestation / documents notes:
+- Credit breakdown (CS / maths / stats / physics credits), if known:
+- Optional, only used for funding rules that depend on it:
+  - Rough family annual income band (for need-based grants):
+  - Gender (some scholarships have separate rates or quotas):
 
 ## Goals
 - Field of interest within AI:

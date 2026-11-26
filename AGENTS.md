@@ -7,11 +7,15 @@ without admission, and admission is useless without funding).
 ## Files
 
 - `data/profile.md`: the student's facts and preferences. Personal, gitignored.
-- `data/tracker.md`: one row per program+funding pair. Personal, gitignored.
+- `data/tracker.md`: one row per program. List every funding route for it in
+  the Funding column (note routes that are ineligible or can't be combined);
+  score the best route the student is eligible for. Personal, gitignored.
 - `data/sop/`: base statement of purpose (`base.md`) and one tailored copy per program.
 - `data/notes.md`: session log: funding schemes ruled out (so they're never
   re-searched), decisions, and where to resume. Read it at the start of every
-  session; append to it at the end.
+  session; append to it at the end. Also the place for a program's extra
+  sources: the tracker's `Source` holds the page with the deadline, the rest go
+  here under the program's name.
 - `profile.example.md`: template for `data/profile.md`.
 
 If `data/profile.md` is missing, run **setup** before anything else.
@@ -30,6 +34,14 @@ If `data/profile.md` is missing, run **setup** before anything else.
 4. Never submit, email, pay or create accounts. You prepare; the student acts.
 5. Dates: write them as `YYYY-MM-DD` with the timezone if the page gives one.
    Many deadlines differ for funding vs admission — record both.
+6. **Calls not published yet.** If the target year's call isn't out, write
+   `? (last: <date of last cycle>)`. Never present last cycle's date, or a
+   third-party guess, as this year's. `plan` may use last cycle's date plus
+   one year as an estimate, labelled `est.`. Eligibility rules tied to a
+   cycle (e.g. "graduate by 30 June") are checked against last cycle's rule
+   and flagged. Re-check when the new call is due.
+7. Arithmetic on sourced numbers is fine (e.g. yearly to monthly) if marked
+   `≈`. Copy amounts with their period (`€7,419/yr`).
 
 ## Modes
 
@@ -70,7 +82,9 @@ student's nationality isn't eligible), add it there with the reason.
    you found, how many passed eligibility, and which queries you used.
 
 If a page won't load (JavaScript-only, blocked, server error, PDF you can't
-read), say so and ask the student to paste its text. A search-result snippet
+read), try another route first: download PDFs and extract the text with a
+shell tool, or set the page's filters (e.g. citizenship, applicant category)
+if deadlines appear only after choosing them. If it still fails, say so and ask the student to paste its text. A search-result snippet
 from the official domain may be used if you cite the exact URL and mark it
 `(snippet)`. Don't fill the gaps from memory.
 
@@ -84,7 +98,9 @@ Same as evaluate but steps 1-3 only, and a one-line verdict each. Add rows.
 Sort tracker rows that aren't `ineligible`/`rejected`/`declined` (unscored
 `?` rows included) by `deadline - prep days needed`
 (SOP ~5 days, recommendation letters ~21 days, test booking ~30 days,
-transcript attestation per profile). Output this week's actions and anything
+degree/transcript attestation ~14 days, consular or legalised income
+documents ~30 days, visa ~60 days before the start date; the profile can
+override). Output this week's actions and anything
 at risk of being missed. Flag rows whose `checked` date is older than 30 days
 for re-verification.
 
@@ -150,6 +166,16 @@ catalogue by name and suggest a fix to this file.
 | Effort to apply | 10% | Few documents, no fee, no extra tests |
 | Deadline safety | 5% | Enough time to prepare well |
 
+Score each dimension 1-5; the total is 0-5 with one decimal (0 if ineligible).
+
+- **Funding:** compare the stipend with the study country's official living-cost
+  figure (e.g. the visa's required means of support), citing it. Funding that
+  is competitive or income-based, not guaranteed, scores at most 4.
+- **Deadline safety:** days left to the earliest deadline: >90 = 5, 60-90 = 4,
+  30-60 = 3, 14-30 = 2, <14 = 1. Unpublished (`est.`) dates score at most 3.
+- If funding depends on something not in the profile (family income, gender),
+  say so and ask; don't assume.
+
 Say plainly when a dimension is a judgement call rather than a fact.
 
 ## Tracker format
@@ -157,7 +183,7 @@ Say plainly when a dimension is a judgement call rather than a fact.
 `data/tracker.md`:
 
 ```
-| # | Program | University | Country | Funding | Type | Covers | Stipend/mo | Admission DL | Funding DL | Score | Status | Docs | Next action | Source | Checked |
+| # | Program | University | Country | Funding | Type | Covers | Stipend | Admission DL | Funding DL | Score | Status | Docs | Next action | Source | Checked |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 ```
 
@@ -165,7 +191,9 @@ Say plainly when a dimension is a judgement call rather than a fact.
 separately), `waiver` (tuition only), `none`.
 `Status`: `found`, `ineligible`, `preparing`, `submitted`, `interview`,
 `admitted`, `funded`, `rejected`, `declined`.
-`Docs`: short codes, e.g. `SOP✓ CV✓ LoR 1/2 IELTS✗ transcript✓`.
+`Stipend`: amount with its period, e.g. `€7,419/yr` or `€1,400/mo`.
+`Docs`: short codes, e.g. `SOP✓ CV✓ LoR 1/2 IELTS✗ transcript✓ HAT✗`; add
+any test or document a program needs.
 
 ## Working on this repo itself
 
