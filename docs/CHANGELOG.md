@@ -19,6 +19,10 @@ First real run (Gemini CLI, then Claude Code) found:
   - PDFs and filter-gated pages: extract text / set filters before giving up
   - `plan` prep times now include attestation, legalised documents and visa
   - profile template: credit breakdown, optional income band and gender for funding rules
+- Global use (D-008): nationality checked against each funder's list, home-country nomination
+  routes, fee waivers, visa proof-of-funds and post-study work rights extracted, no grade
+  conversion, scam warnings, conversation in the student's language, worldwide government
+  scheme list, profile fields for degree length and application budget.
 - README redesigned: badges, mode table, made-up example session and tracker, scoring, file layout, privacy notes.
 
 ## 0.1.0 (unreleased)

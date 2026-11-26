@@ -36,3 +36,11 @@ of programs would be wrong within a year and contradict hard rule 2.
 We ship only slow-changing country facts (who funds, when cycles open,
 post-study work rights) with sources and check dates; programs are always
 found and verified live.
+
+## D-008 Built for students everywhere (2026-11)
+Most users will be from low- and middle-income countries. So nationality
+is checked against each funder's own lists, home-country nomination routes
+are searched, application costs and visa proof-of-funds count in scoring,
+grades are never converted by the agent, scams are flagged, and the agent
+talks in the student's language. Gemini CLI's free tier is listed first so
+no paid subscription is required.

@@ -23,6 +23,8 @@ Finding a funded Master's means juggling dozens of tabs: scholarship portals, un
 
 fundedgrad turns that into one conversation with an AI agent and one tracker file. It treats **a program plus its funding as a single unit**, because a scholarship is useless without admission, and admission is useless without funding.
 
+**Built for students everywhere**, especially where every application fee counts: it checks your nationality against each funder's own lists, looks for your home country's nomination routes and fee waivers, counts visa proof-of-funds before calling a program "free", warns about scholarship scams, and can talk to you in your own language.
+
 ## ✨ What it does
 
 | You say | It does |
@@ -46,7 +48,7 @@ fundedgrad turns that into one conversation with an AI agent and one tracker fil
 
 ## 🚀 Quick start
 
-You need an AI coding CLI that can browse the web. Gemini CLI has a free tier.
+You need an AI coding CLI that can browse the web. **Gemini CLI has a free tier, so you don't need a paid subscription.** Claude Code and Codex also work. Check which one is available in your country.
 
 ```bash
 git clone https://github.com/xtarcagency-creator/fundedgrad.git

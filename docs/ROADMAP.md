@@ -34,7 +34,8 @@ A feature isn't done until it's `tested`.
 |---|---|
 | Run `sop` and `review` on a real or made-up SOP | The only untested modes |
 | Re-run `evaluate` after the 0.1.1 fixes | Confirm the new rules are followed |
-| Verify every link in **Sources** | Dead links waste the agent's searches |
+| Verify every link in **Sources** and each scheme's eligible-country list | Dead links waste searches; lists change yearly |
+| Test with students from 2-3 other countries (e.g. Nigeria, India, Bangladesh) | Rules so far were only tested for one nationality |
 | Try it in Gemini CLI as well as Claude Code | Friends without a paid plan will use Gemini |
 | Write a short "first 10 minutes" example in the README | Lower the setup barrier for testers |
 
@@ -42,6 +43,7 @@ A feature isn't done until it's `tested`.
 
 | Item | Trigger to build it |
 |---|---|
+| Translated README (e.g. Urdu, Hindi, Arabic, French, Spanish, Bengali) | Testers from those regions ask for it |
 | Country guide: stable facts per country (funders, cycle months, post-study work rights, tuition norms), each with source + checked date | Agreed idea; research not run yet |
 | `recheck` mode: re-verify stale rows automatically | Deadlines change and `plan` flags pile up |
 | Recommendation-letter tracker (who, which program, by when) | Free text in `Docs` gets messy |

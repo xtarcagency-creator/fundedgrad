@@ -1,9 +1,12 @@
 # Profile
 
+- Preferred language for our conversation:
+
 ## Facts
 - Nationality / citizenships:
 - Current country of residence:
 - Degree, university, field:
+- Degree length (years) and total years of education (e.g. 16):
 - Expected graduation (YYYY-MM):
 - CGPA (and scale) / class rank:
 - English test (type, score, date) or planned date:
@@ -28,7 +31,8 @@
 - Countries to include:
 - Countries to exclude:
 - Needs full funding? (yes / tuition waiver ok / can self-fund X per month):
-- Max total application fees:
+- Max total application budget (fees, tests, attestation, courier), in your currency:
+- Can afford a paid English test? Visa proof of funds (e.g. blocked account)?
 - Willing to learn a local language:
 
 ## Scoring overrides (optional)
