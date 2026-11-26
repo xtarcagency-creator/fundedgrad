@@ -20,8 +20,8 @@ A feature isn't done until it's `tested`.
 | Seed list of official catalogues | `search` | partial | Links not verified |
 | Deadline / prep-time plan for the week | `plan` | tested | 1 user; prep-day estimates are rough defaults |
 | Stale-row flag (checked > 30 days ago) | `plan` | partial | Flags only; doesn't re-check |
-| Tailored SOP with claim-by-claim sources | `sop` | built | Needs `data/sop/base.md` written by the student |
-| Simulated selection panel (chair, faculty, scholarship panel) | `review` | built | A simulation; can't know real committee preferences |
+| Tailored SOP with claim-by-claim sources | `sop` | tested | 1 real user; base built by interview |
+| Simulated selection panel (chair, faculty, scholarship panel) | `review` | tested | 1 real SOP, 3 independent reviewers agreed on top fixes; still a simulation |
 | Update status / documents | `update` | built | |
 | Session log of rule-outs and resume point (`data/notes.md`) | all | built | Added after first real run |
 | Tracker table (`data/tracker.md`) | all | built | |
@@ -33,7 +33,6 @@ A feature isn't done until it's `tested`.
 
 | Item | Why |
 |---|---|
-| Run `sop` and `review` on a real or made-up SOP | The only untested modes |
 | Re-run `evaluate` after the 0.1.1 fixes | Confirm the new rules are followed |
 | Verify every link in **Sources** and each scheme's eligible-country list | Dead links waste searches; lists change yearly |
 | Test with real students from other countries | Simulated runs for 5 countries done (test 3); real users next |
