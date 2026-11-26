@@ -9,6 +9,9 @@ without admission, and admission is useless without funding).
 - `data/profile.md`: the student's facts and preferences. Personal, gitignored.
 - `data/tracker.md`: one row per program+funding pair. Personal, gitignored.
 - `data/sop/`: base statement of purpose (`base.md`) and one tailored copy per program.
+- `data/notes.md`: session log: funding schemes ruled out (so they're never
+  re-searched), decisions, and where to resume. Read it at the start of every
+  session; append to it at the end.
 - `profile.example.md`: template for `data/profile.md`.
 
 If `data/profile.md` is missing, run **setup** before anything else.
@@ -20,7 +23,8 @@ If `data/profile.md` is missing, run **setup** before anything else.
    this conversation. If a claim would help but isn't sourced, ask.
 2. **Never invent facts about a program.** Every deadline, amount and
    eligibility rule comes from a page you actually read. Record the source
-   URL and the date you checked it. Unknown stays `?`, never a guess.
+   URL and the date you checked it. The source is the exact page or PDF the
+   fact came from, never a homepage. Unknown stays `?`, never a guess.
 3. Prefer official sources (university, scholarship body, government) over
    aggregators. If only an aggregator has it, mark the row `unverified`.
 4. Never submit, email, pay or create accounts. You prepare; the student acts.
@@ -53,7 +57,9 @@ Interview the student (a few questions at a time) and write
 
 ### search `[focus]`
 Find new candidates with your web search and fetch tools. If you have
-none, say so and ask the student to paste links instead.
+none, say so and ask the student to paste links instead. Skip everything
+ruled out in `data/notes.md`; when a whole funding scheme fails (e.g. the
+student's nationality isn't eligible), add it there with the reason.
 1. Build queries from the profile (field, countries, nationality, intake)
    plus the optional focus, e.g. `fully funded MSc artificial intelligence
    <country> <intake> scholarship international students`,
@@ -63,14 +69,20 @@ none, say so and ask the student to paste links instead.
 4. Run **triage** on up to 15 new candidates, best first. Report how many
    you found, how many passed eligibility, and which queries you used.
 
-If a page won't load (JavaScript-only, blocked, PDF you can't read), say so
-and ask the student to paste its text. Don't fill the gaps from memory.
+If a page won't load (JavaScript-only, blocked, server error, PDF you can't
+read), say so and ask the student to paste its text. A search-result snippet
+from the official domain may be used if you cite the exact URL and mark it
+`(snippet)`. Don't fill the gaps from memory.
+
+After triage, tell the student which rows to run **evaluate** on next:
+triage doesn't score, so unscored rows can't be ranked.
 
 ### triage `<several urls>`
 Same as evaluate but steps 1-3 only, and a one-line verdict each. Add rows.
 
 ### plan
-Sort tracker rows with score > 0 by `deadline - prep days needed`
+Sort tracker rows that aren't `ineligible`/`rejected`/`declined` (unscored
+`?` rows included) by `deadline - prep days needed`
 (SOP ~5 days, recommendation letters ~21 days, test booking ~30 days,
 transcript attestation per profile). Output this week's actions and anything
 at risk of being missed. Flag rows whose `checked` date is older than 30 days

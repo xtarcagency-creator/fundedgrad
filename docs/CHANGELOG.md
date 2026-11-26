@@ -2,6 +2,14 @@
 
 Newest first.
 
+## 0.1.1 (unreleased)
+First real run (Gemini CLI, then Claude Code) found:
+- `plan` skipped every unscored row; it now includes `?` rows.
+- Sources were homepages; the exact page/PDF is now required.
+- Ruled-out funding schemes had nowhere to go; new `data/notes.md` session log.
+- Official sites sometimes return errors; official-domain snippets allowed if marked.
+- Triage now ends by naming which rows to evaluate next.
+
 ## 0.1.0 (unreleased)
 - `AGENTS.md` with setup, search, evaluate, triage, plan, sop and update modes.
 - Eligibility filter + weighted scoring; tracker format.

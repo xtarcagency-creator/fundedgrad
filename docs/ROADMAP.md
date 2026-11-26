@@ -11,18 +11,19 @@ A feature isn't done until it's `tested`.
 
 | Feature | Mode | Status | Known gaps |
 |---|---|---|---|
-| Profile interview → `data/profile.md` | `setup` | built | Not run yet |
+| Profile interview → `data/profile.md` | `setup` | tested | Worked in Gemini CLI (1 user) |
 | Extract program + funding facts from a page | `evaluate` | built | Not run on real pages |
 | Hard eligibility filter (nationality, GPA, dates, tests) | `evaluate` | built | |
 | Weighted 6-dimension score with shown arithmetic | `evaluate` | built | Weights are a guess; need real feedback |
-| Quick verdicts for many links | `triage` | built | |
-| Web search for new programs | `search` | built | JavaScript-heavy catalogues may not load |
+| Quick verdicts for many links | `triage` | tested | 15 rows in Gemini CLI; sources were homepages (fixed in 0.1.1) |
+| Web search for new programs | `search` | tested | Worked in Gemini CLI; official sites can return errors |
 | Seed list of official catalogues | `search` | partial | Links not verified |
 | Deadline / prep-time plan for the week | `plan` | built | Prep-day estimates are rough defaults |
 | Stale-row flag (checked > 30 days ago) | `plan` | partial | Flags only; doesn't re-check |
 | Tailored SOP with claim-by-claim sources | `sop` | built | Needs `data/sop/base.md` written by the student |
 | Simulated selection panel (chair, faculty, scholarship panel) | `review` | built | A simulation; can't know real committee preferences |
 | Update status / documents | `update` | built | |
+| Session log of rule-outs and resume point (`data/notes.md`) | all | built | Added after first real run |
 | Tracker table (`data/tracker.md`) | all | built | |
 | No-fabrication and never-submit rules | all | built | |
 | Personal data kept out of git (`data/` ignored) | — | built | `git add -f` can still bypass it |
@@ -31,7 +32,7 @@ A feature isn't done until it's `tested`.
 
 | Item | Why |
 |---|---|
-| Run every mode end to end on 5–10 real programs | Nothing is `tested` yet |
+| Run `evaluate`, `plan`, `sop`, `review` on real programs | Only setup/search/triage tested so far |
 | Verify every link in **Sources** | Dead links waste the agent's searches |
 | Try it in Gemini CLI as well as Claude Code | Friends without a paid plan will use Gemini |
 | Write a short "first 10 minutes" example in the README | Lower the setup barrier for testers |
