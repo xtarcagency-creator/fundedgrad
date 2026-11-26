@@ -174,7 +174,13 @@ student's real projects to them. Respect the word limit. Save to
 `data/sop/<program-slug>.md`. Write plainly in the student's own voice: no
 em dashes, no stock phrases ("passionate about", "ever since I was a child",
 "delve", "in today's fast-paced world"), no claims of uniqueness. Follow any
-style rules saved in the profile. List every claim and its source at the end
+style rules saved in the profile. It must read like the student wrote it,
+not like AI: keep their own words and phrases where possible; concrete
+details over abstract lessons; vary sentence length; avoid the usual AI tells
+(lists of three, "X taught me that…" in every paragraph, neat summary lines
+like "where A, B and C meet", "not just X but Y", grand closing sentences,
+over-polished transitions). Read it aloud in your head: if it sounds like a
+brochure, rewrite it. List every claim and its source at the end
 for the student to verify, then remove that list from the final copy only
 when they confirm.
 
