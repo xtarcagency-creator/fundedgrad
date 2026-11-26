@@ -162,6 +162,12 @@ at risk of being missed. Flag rows whose `checked` date is older than 30 days
 for re-verification.
 
 ### sop `<program>`
+If `data/sop/base.md` doesn't exist, build it first: ask the student a few
+questions at a time (why this field, the moment they got hooked, what they
+built and what they learned, their goal after the degree, why a funded
+degree abroad matters to them), then draft a ~700-word base SOP using only
+their answers and the profile, with the claim list below.
+
 Draft a tailored SOP from `data/sop/base.md` plus the program page: name
 specific courses, labs or faculty from the page (cite them), map the
 student's real projects to them. Respect the word limit. Save to
